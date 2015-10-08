@@ -9,18 +9,33 @@
 import UIKit
 
 class PMImageView: UIImageView {
-
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
-        // Drawing code
+    
+    // MARK: Constants 
+    private struct Constants {
+        static let CIFilterName = "CIPixellate"
+        static let PixelScaleKey = 10
     }
-    */
     
     // MARK: Core Image Filter Variables
-    var currentImage: UIImage!
-    var context: CIContext!
-    var currentFilter: CIFilter!
+    private var currentImage: UIImage!
+    private let contextFilter: CIContext? = CIContext(options:nil)
+    private let currentFilter = CIFilter(name: Constants.CIFilterName)
+    
+    func applyPixelManiacFilter() {
+        guard self.image != nil else { return }
+        currentImage = self.image
+        
+        let beginImage = CIImage(image: currentImage)
+        
+        currentFilter?.setValue(beginImage, forKey: kCIInputImageKey)
+        currentFilter?.setValue(Constants.PixelScaleKey, forKey: kCIInputScaleKey)
+        
+        guard let newCGImage = contextFilter?.createCGImage(currentFilter!.outputImage!, fromRect: currentFilter!.outputImage!.extent) else { return }
+        
+        let newImage = UIImage(CGImage: newCGImage)
+        
+        //Apply filter to imageView
+        self.image = newImage
+    }
 
 }

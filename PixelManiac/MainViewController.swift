@@ -32,6 +32,9 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func applyFilter() {
+        imageView.applyPixelManiacFilter()
+        //Deactivate Apply Filter Button
+        applyFilterButton.enabled = false
     }
 
 }
@@ -50,6 +53,8 @@ extension MainViewController: UIImagePickerControllerDelegate, UINavigationContr
         
         //Assign Picker image to imageView
         imageView.image = newImage
+        //Activate ApplyFilter Button
+        applyFilterButton.enabled = true
         
         dismissViewControllerAnimated(true, completion: nil)
     }
