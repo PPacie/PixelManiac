@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  PixelManiac
 //
 //  Created by Pablo Surfate on 10/8/15.
@@ -8,7 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
+    
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var applyFilterButton: UIButton!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +23,16 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    @IBAction func addImage(sender: UIBarButtonItem) {
+    }
+    
+    @IBAction func applyFilter() {
+    }
 
 }
 
+extension MainViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    
+}
