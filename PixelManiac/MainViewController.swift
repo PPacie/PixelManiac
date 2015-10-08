@@ -10,7 +10,7 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageView: PMImageView!
     @IBOutlet weak var applyFilterButton: UIButton!
     
 
@@ -25,6 +25,10 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func addImage(sender: UIBarButtonItem) {
+        let picker = UIImagePickerController()
+        picker.allowsEditing = true
+        picker.delegate = self
+        presentViewController(picker, animated: true, completion: nil)
     }
     
     @IBAction func applyFilter() {
@@ -34,5 +38,23 @@ class MainViewController: UIViewController {
 
 extension MainViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    // MARK: UIImagePicker Delegates
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        var newImage: UIImage?
+        
+        newImage = info["UIImagePickerControllerEditedImage"] as? UIImage
+        
+        if newImage == nil {
+            newImage = info["UIImagePickerControllerOriginalImage"] as? UIImage
+        }
+        
+        //Assign Picker image to imageView
+        imageView.image = newImage
+        
+        dismissViewControllerAnimated(true, completion: nil)
+    }
     
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
 }

@@ -12,6 +12,7 @@
 		678633EA1BC6E0F30007465E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 678633E81BC6E0F30007465E /* Main.storyboard */; };
 		678633EC1BC6E0F30007465E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 678633EB1BC6E0F30007465E /* Assets.xcassets */; };
 		678633EF1BC6E0F30007465E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 678633ED1BC6E0F30007465E /* LaunchScreen.storyboard */; };
+		678633F81BC6FE9B0007465E /* PMImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678633F71BC6FE9B0007465E /* PMImageView.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		678633EB1BC6E0F30007465E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		678633EE1BC6E0F30007465E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		678633F01BC6E0F30007465E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		678633F71BC6FE9B0007465E /* PMImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PMImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		678633E31BC6E0F30007465E /* PixelManiac */ = {
 			isa = PBXGroup;
 			children = (
+				678633F61BC6FE710007465E /* Views */,
 				678633E41BC6E0F30007465E /* AppDelegate.swift */,
 				678633E61BC6E0F30007465E /* MainViewController.swift */,
 				678633E81BC6E0F30007465E /* Main.storyboard */,
@@ -62,6 +65,14 @@
 				678633F01BC6E0F30007465E /* Info.plist */,
 			);
 			path = PixelManiac;
+			sourceTree = "<group>";
+		};
+		678633F61BC6FE710007465E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				678633F71BC6FE9B0007465E /* PMImageView.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,6 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				678633F81BC6FE9B0007465E /* PMImageView.swift in Sources */,
 				678633E71BC6E0F30007465E /* MainViewController.swift in Sources */,
 				678633E51BC6E0F30007465E /* AppDelegate.swift in Sources */,
 			);

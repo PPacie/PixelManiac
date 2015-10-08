@@ -26,7 +26,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lpN-IW-Jiu">
                                 <rect key="frame" x="0.0" y="64" width="600" height="490"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KgQ-RA-00w">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KgQ-RA-00w" customClass="PMImageView" customModule="PixelManiac" customModuleProvider="target">
                                         <rect key="frame" x="8" y="8" width="584" height="474"/>
                                     </imageView>
                                 </subviews>
