@@ -57,12 +57,8 @@
 			isa = PBXGroup;
 			children = (
 				678633F61BC6FE710007465E /* Views */,
-				678633E41BC6E0F30007465E /* AppDelegate.swift */,
-				678633E61BC6E0F30007465E /* MainViewController.swift */,
-				678633E81BC6E0F30007465E /* Main.storyboard */,
-				678633EB1BC6E0F30007465E /* Assets.xcassets */,
-				678633ED1BC6E0F30007465E /* LaunchScreen.storyboard */,
-				678633F01BC6E0F30007465E /* Info.plist */,
+				678633FA1BC6FFFD0007465E /* ViewControllers */,
+				678633F91BC6FFE60007465E /* Support */,
 			);
 			path = PixelManiac;
 			sourceTree = "<group>";
@@ -73,6 +69,26 @@
 				678633F71BC6FE9B0007465E /* PMImageView.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		678633F91BC6FFE60007465E /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				678633E41BC6E0F30007465E /* AppDelegate.swift */,
+				678633E81BC6E0F30007465E /* Main.storyboard */,
+				678633EB1BC6E0F30007465E /* Assets.xcassets */,
+				678633ED1BC6E0F30007465E /* LaunchScreen.storyboard */,
+				678633F01BC6E0F30007465E /* Info.plist */,
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
+		678633FA1BC6FFFD0007465E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				678633E61BC6E0F30007465E /* MainViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
