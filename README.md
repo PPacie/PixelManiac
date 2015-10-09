@@ -1,6 +1,7 @@
 # Pixel Maniac
-Image Filter demo app using Core Image and [GPUImage Framwork](https://github.com/BradLarson/GPUImage)
-It was coded in Swift 2.0 - Xcode 7.0
+Image Filter demo app using Core Image and [GPUImage Framwork](https://github.com/BradLarson/GPUImage). 
+
+It was coded in Swift 2.0 - Xcode 7.0.
 
 | Before| After |
 |-------|-------|
