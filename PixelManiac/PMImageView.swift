@@ -15,7 +15,7 @@ class PMImageView: UIImageView {
     private struct Constants {
         // Core Image Filter
         static let CIFilterName = "CIPixellate"
-        static let PixelScaleKey = 5
+        static let PixelScaleKey = 8
         // GPUImage Filter
         static let Threshold: CGFloat = 1.0
         static let Quantization: CGFloat = 4.0
