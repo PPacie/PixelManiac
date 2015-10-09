@@ -14,7 +14,7 @@ class PMImageView: UIImageView {
     // MARK: Constants 
     private struct Constants {
         static let CIFilterName = "CIPixellate"
-        static let PixelScaleKey = 10
+        static let PixelScaleKey = 5
     }
     
     // MARK: Core Image Filter Variables
