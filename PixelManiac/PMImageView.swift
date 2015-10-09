@@ -13,8 +13,12 @@ class PMImageView: UIImageView {
     
     // MARK: Constants 
     private struct Constants {
+        // Core Image Filter
         static let CIFilterName = "CIPixellate"
         static let PixelScaleKey = 5
+        // GPUImage Filter
+        static let Threshold: CGFloat = 1.0
+        static let Quantization: CGFloat = 4.0
     }
     
     // MARK: Core Image Filter Variables
@@ -28,7 +32,8 @@ class PMImageView: UIImageView {
         let inputImage = self.image
         
         let cartoonFilter = GPUImageToonFilter()
-        cartoonFilter.threshold = 0.3
+        cartoonFilter.threshold = Constants.Threshold
+        cartoonFilter.quantizationLevels = Constants.Quantization
         
         let outputImage = cartoonFilter.imageByFilteringImage(inputImage)
         
