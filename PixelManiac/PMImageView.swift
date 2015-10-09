@@ -18,13 +18,22 @@ class PMImageView: UIImageView {
     }
     
     // MARK: Core Image Filter Variables
-    private var currentImage: UIImage!
     private let contextFilter: CIContext? = CIContext(options:nil)
     private let currentFilter = CIFilter(name: Constants.CIFilterName)
     
     func applyPixelManiacFilter() {
         guard self.image != nil else { return }
-        currentImage = self.image
+        
+        // Apply GPUImage Filter (Cartoon)
+        let inputImage = self.image
+        
+        let cartoonFilter = GPUImageToonFilter()
+        cartoonFilter.threshold = 0.3
+        
+        let outputImage = cartoonFilter.imageByFilteringImage(inputImage)
+        
+        // Apply Core Image Filter (Pixellate)
+        guard let currentImage = outputImage else { return }
         
         let beginImage = CIImage(image: currentImage)
         
@@ -35,7 +44,7 @@ class PMImageView: UIImageView {
         
         let newImage = UIImage(CGImage: newCGImage)
         
-        //Apply filter to imageView
+        // Update PMImageView with the filtered image.
         self.image = newImage
     }
 
