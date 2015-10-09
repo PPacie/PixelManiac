@@ -38,9 +38,7 @@ class PMImageView: UIImageView {
         let outputImage = cartoonFilter.imageByFilteringImage(inputImage)
         
         // Apply Core Image Filter (Pixellate)
-        guard let currentImage = outputImage else { return }
-        
-        let beginImage = CIImage(image: currentImage)
+        guard let beginImage = CIImage(image: outputImage) else { return }
         
         currentFilter?.setValue(beginImage, forKey: kCIInputImageKey)
         currentFilter?.setValue(Constants.PixelScaleKey, forKey: kCIInputScaleKey)
