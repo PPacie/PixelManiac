@@ -12,18 +12,7 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var imageView: PMImageView!
     @IBOutlet weak var applyFilterButton: UIButton!
-    
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+        
     @IBAction func addImage(sender: UIBarButtonItem) {
         let picker = UIImagePickerController()
         picker.allowsEditing = true
