@@ -5,7 +5,7 @@ It was coded in Swift 2.0 - Xcode 7.0.
 
 | Before| After |
 |-------|-------|
-|<img src="Before.png" alt="Before" width="320" height"568>|<img src="After.png" alt="After" width="320" height"568>|
+|<img src="Before.png" width="320">|<img src="After.png" width="320">|
 
 
 ## Missing Features
